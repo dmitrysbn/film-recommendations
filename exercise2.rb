@@ -4,25 +4,25 @@ comedy = "Zoolander"
 dramedy = "Lost in Translation"
 book = "The Art of War"
 
-puts "Do you like documentaries?"
-documentary_answer = gets.chomp.downcase
+puts "On the scale from 1 to 5, how much do you like documentaries?"
+documentary_rating = gets.chomp.to_i
 
-puts "Do you like dramas?"
-drama_answer = gets.chomp.downcase
+puts "What about dramas?"
+drama_rating = gets.chomp.to_i
 
-puts "Do you like comedies?"
-comedy_answer = gets.chomp.downcase
+puts "Comedies?"
+comedy_rating = gets.chomp.to_i
 
-if documentary_answer == "yes"
+if documentary_rating >= 4
   puts "I think you would really enjoy '#{documentary}'. It's a great documentary by Lixin Fan."
 
-elsif drama_answer == "yes" && comedy_answer == "yes"
+elsif (comedy_rating >= 4) && (drama_rating >= 4)
   puts "'#{dramedy}' is an amazing movie."
 
-elsif drama_answer == "yes"
+elsif drama_rating >= 4
   puts "Check out '#{drama}'. It won the 2015 Best Picture!"
 
-elsif comedy_answer == "yes"
+elsif comedy_rating >= 4
   puts "'#{comedy}' is hilarious."
 
 else
